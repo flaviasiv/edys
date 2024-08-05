@@ -61,8 +61,7 @@ swiper-container{
 }
 .small{
     font-size: 16px;
-    font-style: normal;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 150%; 
 }
 .postercontainer{
@@ -99,17 +98,35 @@ swiper-container{
 .postergrid{
     padding-bottom: 80px;
 }
- @media screen and (max-width:1290px) {
- /* .postercontainer{
-        background: url(../assets/posterbg-mob.jpg);
-        background-size: cover;
-        background-position: 100%;
+.infosm{display: none;}
+ @media screen and (max-width:1450px) {
+   .postercontainer{
+        background-size: 150%;
         margin-top: 80px;
-    }*/
+    }
     .posterinfos{
         text-align: center;
-        padding: 107px 0 70px;
+        padding: 100px 0 70px;
         max-width: 990px;
+    }
+}
+@media screen and (max-width:1050px) {
+.postercontainer{
+    background: url(../assets/bg-posterm.png);
+    background-size: 100%;
+       background-position: 100%;
+   }
+   .posterinfos{
+       max-width: 309px;
+   }
+   .posterinfos img{
+    max-width: 144px
+   }
+   .infosw{display: none;}
+   .infosm{
+        display: flex;
+        flex-direction: column;
+
     }
 } 
 .videoimg {
@@ -123,14 +140,15 @@ swiper-container{
     content: '';
     /* margin: 18px; */
     inset: 0;
-    background: linear-gradient(180deg, rgba(26, 20, 9, 0.00) 30.71%, #1A1409 95.31%), no-repeat;
+    background: linear-gradient(180deg, rgba(26, 20, 9, 0.00) 7.02%, #1A1409 24.53%), no-repeat;
     background-repeat: no-repeat;
-    opacity: 80%;
+    opacity: 90%;
     background-size: 100%;
     position: absolute;
 }
 .servicescontainer{
     padding-bottom: 110px;
+    background-color: #1A1409;
 }
 swiper-container.mySwiper1 {
   width: 100%;
@@ -169,7 +187,6 @@ swiper-slide.swiper1 {
 .servicestitle h2{
     font-family: "Tiro Telugu";
     font-size: 56px;
-    font-style: normal;
     font-weight: 400;
     line-height: 120%; 
     color: #E1D1AF;
@@ -260,30 +277,6 @@ swiper-slide.swiper1 {
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
 }
-.listareas{
-    color: #fff;
-    display: flex;
-    padding: 0 0 32px 0;
-    width: 100%;
-    max-width: 1500px;
-    margin: auto;
-    justify-content: center;
-    gap: 56px;
-    text-align: left;
-    margin-top: 32px;
-    padding-left: 45px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 150%;
-}
-.listareas ul li{
-    list-style: none;
-}
-.listareas ul li:before {
-    content:"·";
-    font-size:20px;
-    margin-right: 15px;
-}
 .servicesbutton{
     position: relative;
   display: flex;
@@ -309,25 +302,28 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
     font-weight: 700;
 }
 @media screen and (max-width:990px) {
-    swiper-slide.swiper1 {
-      max-width: 212px;
+    .servicescontainer{
+        padding-bottom: 0;
     }
-    .swiper1 img {
-      width: 206px !important;
+    .videoimg {
+        height: 330px;
     }
     .servicestitle{
         padding: 70px 10px 50px 10px;
     }
-    .servicestitle img{
-        max-width: 200px;
-    }
     .servicestitle h2{
-        font-size: 36px;
-        max-width: 280px;
+        max-width: 357px;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 120%;
         margin: auto;
     }
-    .servicestitle p{
-        max-width: 290px;
+    .servicesbutton{
+        width: 200px;
+        padding: 12px 0;
+    }
+    .servicesbutton a{
+        font-size: 16px;
     }
 }
 .preferencecontainer{
@@ -341,6 +337,12 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
     margin: auto;
     padding: 80px 50px;
     justify-content: space-between;
+    row-gap: 32px;
+}
+.preferencegrid{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
 }
 .preferencetitle{
     width: 100%;
@@ -355,7 +357,6 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
 .preferencetitle h1{
     font-family: "Tiro Telugu";
     font-size: 56px;
-    font-style: normal;
     font-weight: 400;
     line-height: 120%; 
     color: #E1D1AF;
@@ -363,7 +364,6 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
 .preferencetitle p{
     font-family: 'Roboto';
     font-size: 14px;
-    font-style: normal;
     font-weight: 400;
     line-height: 130%;
     color: #E1D1AF;
@@ -378,50 +378,35 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
     gap: 16px;
     right: 0;
 }
-.preferencecard svg{
-    stroke: #fff;
-    fill: #EEEEEE
-}
 .preferencecard:hover{
-    background: #fff;
-    color: #265083;
+    background: #E1D1AF;
+    transition: 0.3s all;
 }
-.preferencecard:hover svg{
-    stroke: #265083;
-    fill: #265083
-}
-.preferencecard:hover svg path{
-    stroke: #265083;
-    fill: #265083
+.preferencecard:hover h3{
+    color: #1A1409;
+    transition: 0.3s all;
 }
 .preferencecard h3{
     font-family: 'Merriweather';
     font-size: 18px;
-    font-style: normal;
     font-weight: 400;
     line-height: 140%;
     color: #E1D1AF;
 }
 @media screen and (max-width:830px) {
-    .videoimg {
-        display: block;
-        object-fit: cover;
-        height: 1000px;
-    }
-    .logopref{
-        padding-top: 80px;
-        width: 200px;
-        margin: auto
+    .preferenceabs{
+        padding: 0 10px;
+        flex-direction: column;
     }
     .preferencetitle{
-        max-width: 427px;
-    }
-    .preferencecard{
-        max-width: 360px;
+        text-align: center;
         margin: auto;
     }
-    .preferencecard h3{
-        font-size: 22px;
+    .preferencetitle .vetor1{
+        margin: auto;
+    }
+    .preferencecard{
+        padding: 16px 0 16px 32px;
     }
 }
 .aboutcontainer{
@@ -440,7 +425,7 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
     margin: auto;
     align-items: center;
 }
-.aboutcontainer img{
+.aboutimgw{
     max-width: 581px;
 }
 .abouttitle{
@@ -452,7 +437,6 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
 .about h1{
     font-family: "Tiro Telugu";
     font-size: 56px;
-    font-style: normal;
     font-weight: 400;
     line-height: 120%; 
     color: #E1D1AF;
@@ -461,15 +445,19 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
     max-width:352px;
     font-family: 'Roboto';
     font-size: 14px;
-    font-style: normal;
     font-weight: 400;
     line-height: 130%;
     color: #E1D1AF;
 }
+.aboutimm{display: none;}
 @media screen and (max-width:990px) {
     .about{
         padding: 0px 10px;
         flex-direction: column;
+        gap: 32px;
+    }
+    .about .vetor1{
+        margin: auto;
     }
     /* .reveal.revealtext.aboutimg{
         position: absolute;
@@ -481,24 +469,26 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
         transform: translateX(0%);
         opacity: 1;
     } */
+     .aboutimgw{display: none;}
+     .aboutimm{display: block;}
     .aboutimg{
-        position: absolute;
-        top: 270px;
-        width: 100%;
-        max-width:402px;
+        max-width:329px;
         padding: 0px 10px;
         margin: auto;
     }
     .abouttitle{
         display: flex;
         flex-direction: column;
-        margin-top: 450px;
+        text-align: center;
         padding: 0 10px;
     }
+    .about p{margin: auto;}
+    .about h1{max-width: 370px; margin: auto;}
 }
 .gallerycontainer{
     padding: 120px 0;
-    background: url(../assets/gallerybg.png), no-repeat;
+    background: url(../assets/gallerybg.png);
+    background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom;
 }
@@ -507,8 +497,8 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
     flex-direction: column;
     gap: 24px;
     text-align: center;
-    max-width: 664px;
-    padding: 0 50px;
+    max-width: 420px;
+    padding: 0 10px;
     margin: auto;
 }
 .gallerytitle p, .reviewstitle p{
@@ -539,7 +529,26 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
   margin: auto;
   object-fit: cover !important;
 }
-
+@media screen and (max-width:1200px) {    
+    .gallerycontainer{
+        background: url(../assets/gallerybg.png);
+        background-size: 150%;
+    }
+}
+@media screen and (max-width:900px) {    
+    .gallerycontainer{
+        background-size: 250%;
+    }
+    .mySwiper3 {
+      height:290px;
+    }
+    .swiper3 {
+      max-width: 250px;
+    }
+    .swiper3 img {
+      max-width: 250px;
+    }
+}
 
 
 
@@ -552,14 +561,13 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
     flex-direction: column;
     gap: 24px;
     text-align: center;
-    max-width: 914px;
-    padding: 0 50px;
+    max-width: 610px;
+    padding: 0 10px;
     margin: auto;
 }
 .reviewstitle{
     color: #E1D1AF;
     font-size: 14px;
-    font-style: normal;
     font-weight: 400;
     line-height: 130%; 
 }
@@ -573,7 +581,7 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
     width: 100%;
     max-width: 9999px;
     margin: auto;
-    padding: 80px 0;
+    padding: 80px 0 30px;
     color: #000;
 }
 .ig-embed h2{
@@ -595,17 +603,6 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
     height:810px;
 }
 @media screen and (max-width:980px) {
-    .gallerytitle, .reviewstitle{
-        max-width: 369px;
-        padding: 0 10px;
-    }
-    .gallerytitle h2, .reviewstitle h2{
-        font-size: 36px;
-    }
-    .gallerygrid img{
-        max-width: 350px;
-        margin: auto;
-    }
     .ig-embed iframe{
         width:500px; 
         height:500px;
@@ -639,24 +636,27 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
     align-items: center;
     width: 100%;
     max-width: 699px;
-    gap: 80px;
+    gap: 30px;
     margin: auto;
-    padding-bottom: 40px;
 }
 .formp h2{
     width: 660px;    
     color: #E1D1AF;
     font-family: "Tiro Telugu";
     font-size: 40px;
-    font-style: normal;
     font-weight: 400;
     line-height: 120%;
 }
-.formp img{
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+.logoform{
     color: #fff;
-    width: 230px;
+    width: 210px;
     z-index: 99;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 form {
     list-style: none;
@@ -670,7 +670,6 @@ form {
     background-color: #FFF;
     border-radius: 24px;
     padding: 32px;
-    margin-top: 30px;
     z-index: 99;
 }
 .formgroup{
@@ -687,7 +686,7 @@ form {
     width: 100%;
     list-style: none;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 2px;
     border: 1px solid #333333d8;
     resize: none;
 }
@@ -717,15 +716,11 @@ form button{
         padding: 0;
     }
     .formp h2{
-        width: 270px;    
+        width: 330px;    
         font-size: 36px;
     }
     .formgrid{
     padding: 100px 10px;
-    background: url(../assets/formbg-m.png) no-repeat;
-    background-size: 135%;
-    background-position-y: top;
-    background-position-x: right;
 }
 }
 .mapscontainer{
@@ -764,7 +759,6 @@ form button{
 .mapinfo ul li h2{
     margin-bottom: 8px;
     font-size: 24px;
-    font-style: normal;
     font-weight: 700;
     line-height: 100%;
 }
@@ -772,7 +766,6 @@ form button{
     margin-top: 8px;
     text-decoration: underline;
     font-size: 16px;
-    font-style: normal;
     font-weight: 500;
     line-height: 150%;
 }
@@ -795,7 +788,6 @@ line-height: 150%;
 .listareas{
     color: #fff;
     display: flex;
-    padding: 0 0 32px 0;
     width: 100%;
     max-width: 1500px;
     margin: auto;
@@ -842,21 +834,23 @@ line-height: 150%;
     }
     .listareas{
         gap: 36px;
-        padding-left: 0px;
     }
 }
 .popuptest{
-    position: relative;
-    width: 100%;
-    max-width: 9999px;
-    margin: auto;    
+    display: flex;
+    flex-direction: column;
+    background: url(../assets/formbg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 200px 0 100px;
+    gap: 32px;
 }
 .popupgrid{
     display: flex;
     width: 100%;
-    max-width: 656px;
+    max-width: 466px;
     margin: auto;
-    padding: 0 50px 0;
+    padding: 0 10px 0;
     justify-content: center;
 }
 .popup .content{
@@ -867,64 +861,45 @@ line-height: 150%;
     align-items: center;
     text-align: center;
     z-index: 1;
-    gap: 24px;
-    padding: 200px 0 32px 0;
-    color: #fff;
+    gap:32px;
+    color: #E1D1AF;
 }
 .popupimg{
+    display: flex;
     width: 100%;
-    max-width: 9999px;
+    max-width: 645px;
     margin: auto;
-    height: 350px;
-    object-fit: cover;
-    bottom: 0;
-}
-.content1 .popupimg{
-    object-position: 0px 50%;
-}
-.content2 .popupimg{
-    object-position: 0px 50%;
-}
-.content3 .popupimg{
-    object-position: 0px 70%;
-}
-.content4 .popupimg{
-    object-position: 0px 60%;
-}
-/* .content5 .popupimg{
-    object-position: 0px 50%;
-} */
-.content6 .popupimg{
-    object-position: 0px 50%;
+    justify-content: center;
 }
 .popup .content h1{
     display: flex;
     flex-direction: column;
-    font-size: 72px;
+    font-family: "Tiro Telugu";
     font-size: 56px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 120%;
 }
 .popup .content p{
-    font-size: 18px;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-style: normal;
     font-weight: 400;
-    line-height: 150%;
+    line-height: 130%; 
 }
-.popupimgm{display: none;}
+.callpopup{
+    border-radius: 100px;
+    background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #A0905F 83.65%, #765520 100%);
+}
+.callpopup a{    
+    color: #000;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 150%; 
+}
 @media screen and (max-width:800px) {
     .popuptest{
     padding-bottom: 100px;
-    }
-    .popupgrid{
-        padding: 50px 40px 0;
-    }
-    .popupimg{display: none;}
-    .popupimgm{
-        display: block;
-        width: 100%;
-        max-width: 900px;
-        margin: auto;
-        padding: 0 40px;
     }
 }
 
