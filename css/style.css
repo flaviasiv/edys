@@ -140,7 +140,7 @@ swiper-container{
     content: '';
     /* margin: 18px; */
     inset: 0;
-    background: linear-gradient(180deg, rgba(26, 20, 9, 0.00) 7.02%, #1A1409 24.53%), no-repeat;
+    background: linear-gradient(180deg, #1A1409 0%, rgba(0, 0, 0, 0.00) 100%), no-repeat;
     background-repeat: no-repeat;
     opacity: 90%;
     background-size: 100%;
@@ -148,7 +148,7 @@ swiper-container{
 }
 .servicescontainer{
     padding-bottom: 110px;
-    background-color: #1A1409;
+    background-color: #000;
 }
 swiper-container.mySwiper1 {
   width: 100%;
@@ -531,8 +531,9 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
 }
 @media screen and (max-width:1200px) {    
     .gallerycontainer{
-        background: url(../assets/gallerybg.png);
+        background: url(../assets/gallerybgm.png);
         background-size: 150%;
+        background-position-y: bottom;
     }
 }
 @media screen and (max-width:900px) {    
@@ -623,12 +624,12 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
     max-width: 9999px;
     margin: auto;
     background: url(../assets/formbg.png) no-repeat;
-    background-position: 100%;
+    background-position: bottom;
     background-size: cover;
     /* background-size: 100%; */
     padding: 120px 50px;
 }
-.formp{
+.formp, .forminfos{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -646,6 +647,11 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
     font-size: 40px;
     font-weight: 400;
     line-height: 120%;
+}
+.formp p{
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 400px;
 }
 .form{
     display: flex;
