@@ -423,10 +423,14 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
     width: 100%;
     max-width: 1200px;
     margin: auto;
+    padding: 0 50px;
     align-items: center;
 }
 .aboutimgw{
-    max-width: 581px;
+    max-width: 501px;
+}
+.aboutimg{
+    border-radius: 50%;
 }
 .abouttitle{
     display: flex;
