@@ -65,10 +65,11 @@ swiper-container{
     line-height: 150%; 
 }
 .postercontainer{
-    background: url(../assets/bg-poster.png);
+    /* background: url(../assets/bg-poster.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: 100%;
+    background-position: 100%; */
+    background-color: #000;
     margin-top: 0px;
 }
 .posterinfos{
@@ -111,11 +112,11 @@ swiper-container{
     }
 }
 @media screen and (max-width:1050px) {
-.postercontainer{
+/* .postercontainer{
     background: url(../assets/bg-posterm.png);
     background-size: 100%;
        background-position: 100%;
-   }
+   } */
    .posterinfos{
        max-width: 309px;
    }
@@ -604,20 +605,22 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
     -webkit-text-fill-color: transparent;
 }
 .ig-embed iframe{
-    width:900px; 
-    height:810px;
+    width:100%;
+    max-width: 900px; 
+    height:100%;
+    max-height: 810px;
 }
 @media screen and (max-width:980px) {
     .ig-embed iframe{
-        width:500px; 
-        height:500px;
+        max-width: 500px; 
+        max-height: 500px;
     }    
 }
 @media screen and (max-width:580px) {
     .ig-embed iframe{
         width:100%;
         max-width: 400px; 
-        height: 450px;
+        max-height: 450px;
     }    
 }
 .formgrid{
@@ -651,6 +654,7 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
     font-size: 40px;
     font-weight: 400;
     line-height: 120%;
+    text-transform: uppercase;
 }
 .formp p{
     font-size: 16px;
