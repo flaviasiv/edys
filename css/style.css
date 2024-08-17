@@ -607,7 +607,7 @@ background: linear-gradient(90deg, #765520 0%, #9C8A59 37.44%, #BFBC8F 50.25%, #
 .ig-embed iframe{
     width:100%;
     max-width: 900px; 
-    height: 430px;
+    height: 500px;
 }
 @media screen and (max-width:980px) {
     .ig-embed iframe{
