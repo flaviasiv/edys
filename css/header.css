@@ -84,7 +84,7 @@ header {
 }
 .menu-linksbtn a:hover{
   color: #E1D1AF;
-    transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .menusocial{
     right: 0;
@@ -110,17 +110,24 @@ header {
     cursor: pointer;
     align-items: center;
 }
-/* .menusocial ul a svg{
+.menusocial ul a svg{
   clip-path: #000;
 }
 .menusocial ul a:hover svg{
-  fill: #fff;
+  fill: #E1D1AF;
+  stroke: #000;
   transition: 0.2s ease-in-out;
 }
+.menusocial ul a:hover svg path{
+  fill: #000;
+  stroke: #000;
+  clip-path: #000;
+}
 .menusocial ul a:hover svg circle{
-  fill: #fff;
+  fill: #E1D1AF;
+  stroke: #000;
   transition: 0.2s ease-in-out;
-} */
+}
 .callnow{
   border-radius: 100px;
   border: 1px solid #765520;
@@ -142,7 +149,10 @@ header {
     margin: auto;
 }
 .callnow:hover{
-  background: Linear;
+  background: #E1D1AF;
+}
+.callnow:hover a{
+  color: #000;
 }
 .btn-toggle{display: none;}
 .logo-m{
